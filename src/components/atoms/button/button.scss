@@ -1,0 +1,30 @@
+@use "../../variables" as *;
+
+.atoms-button {
+  display: flex;
+  width: 200px;
+  height: 55px;
+  color: $white;
+  background-color: $black;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  transition-timing-function: ease;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    width: 150px;
+    height: 55px;
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    width: 180px;
+    height: 45px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: $orange-bistre;
+  }
+}
