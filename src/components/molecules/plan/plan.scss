@@ -1,0 +1,53 @@
+@use "../../variables" as *;
+
+.molecules-plan {
+  @media screen and (max-width: $breakpoint-md) {
+    margin-bottom: 24px;
+  }
+
+  & > .atoms-plan-item {
+    box-sizing: border-box;
+    border: 1px solid $gray_gainsboro;
+    border-top: 0;
+    padding: 20px 10px;
+    line-height: 20.27px;
+    text-align: center;
+    font-size: 14px;
+    font-family: $fontfamily-gothic;
+    color: $black;
+    background-color: $white;
+
+    &:first-of-type {
+      border: 0;
+      line-height: 28.96px;
+      font-size: 20px;
+      font-weight: 700px;
+      color: $white;
+      background-color: $orange_zorba;
+    }
+    &:nth-of-type(2) {
+      padding: 24px 10px;
+      border-top: 1px solid $gray_gainsboro;
+      background-color: $gray_desertStorm;
+      & > .plan-price {
+        margin-bottom: 16px;
+        line-height: 58px;
+        font-size: 40px;
+        font-weight: 700;
+        color: $orange-bistre;
+        &::before {
+          content: "¥";
+          margin-right: 4px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &:nth-child(2n) {
+    box-sizing: border-box;
+    border: 5px solid $orange-bistre;
+    .atoms-plan-item:first-of-type {
+      background-color: $orange-bistre;
+    }
+  }
+}
