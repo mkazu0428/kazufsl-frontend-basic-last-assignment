@@ -1,0 +1,50 @@
+@use "../../variables" as *;
+
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 35px;
+
+  & > .news-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+    @media screen and(min-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
+
+    & > .news-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+      height: calc(402px / 5);
+      box-sizing: border-box;
+      border: 1px solid $gray_gainsboro;
+      background-color: $white;
+      & > .news-capition {
+        width: 100%;
+        text-decoration: none;
+        & > .posted-at {
+          font-size: $fontsize-xs;
+          color: $gray_nobel;
+          margin-bottom: 10px;
+        }
+        & > h3 {
+          width: calc(100% / 3 * 2);
+          margin-right: 20px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-size: $fontsize-m;
+          color: $black;
+        }
+      }
+      &:not(:first-of-type) {
+        border-top: none;
+      }
+    }
+  }
+}
