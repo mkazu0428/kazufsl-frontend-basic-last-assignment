@@ -1,0 +1,34 @@
+@use "../../variables" as *;
+
+.organisms-top {
+  & > .top-imgbox {
+    height: 100%;
+    position: relative;
+
+    @media screen and (max-width: $breakpoint-md) {
+      height: 360px;
+    }
+
+    & > .top-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    & > h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      writing-mode: vertical-rl;
+      font-size: 20px;
+      font-weight: 400;
+      font-family: $fontfamily-mincho;
+      color: $white;
+    }
+  }
+
+  & > .molecules-message {
+    background-color: $black;
+    color: $white;
+  }
+}
