@@ -1,0 +1,26 @@
+@use "../../variables" as *;
+
+.organisms-about {
+  & > .about-imgbox {
+    display: flex;
+    flex-direction: row;
+    & > img {
+      width: calc(100% / 4);
+    }
+    @media screen and(max-width:$breakpoint-lg) {
+      flex-wrap: wrap;
+      & > img {
+        width: calc(100% / 2);
+      }
+    }
+  }
+  & > .molecules-message {
+    background-color: $white_smoke;
+    & > .title {
+      color: $orange_bistre;
+    }
+    & > .explain {
+      color: $black;
+    }
+  }
+}
