@@ -1,0 +1,45 @@
+@use "../../variables" as *;
+
+.organisms-plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > .molecules-message {
+    & > .title {
+      color: $orange-bistre;
+    }
+
+    & > .explain {
+      color: $black;
+    }
+  }
+  & > .plans-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 40px;
+    @media screen and(max-width:$breakpoint-md) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+      gap: 0;
+    }
+    & > .molecules-plan {
+      width: calc(100% / 3);
+
+      &:nth-of-type(2n) {
+        height: fit-content;
+        & .atoms-plan-item:first-of-type {
+          padding-top: 15px;
+        }
+        & .atoms-plan-item:last-of-type {
+          padding-bottom: 15px;
+        }
+      }
+      @media screen and(max-width:$breakpoint-md) {
+        width: max(100%, 250px);
+      }
+    }
+  }
+}
