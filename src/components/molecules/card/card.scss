@@ -48,6 +48,8 @@
     background-color: $white_smoke;
 
     @media screen and(min-width:$breakpoint-md) {
+      justify-content: stretch;
+      height: 100%;
       padding: 32px 35px;
     }
 
