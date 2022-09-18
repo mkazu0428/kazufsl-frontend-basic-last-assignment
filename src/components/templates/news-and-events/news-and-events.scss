@@ -1,0 +1,13 @@
+@use "../../variables" as *;
+
+.news-and-events {
+  padding-top: 50px;
+  padding-bottom: 15px;
+  /*Molecules/Newsにmargin-bottom35pxが設定されているので
+  見た目的には上下に余白が５０pxで統一*/
+  background-color: $white-smoke;
+
+  @media screen and(max-width:$breakpoint-lg) {
+    padding-bottom: 50px;
+  }
+}
