@@ -1,6 +1,6 @@
 @use "../../variables" as *;
 
-.footer {
+footer {
   width: 100%;
 
   & > .footer-1 {
@@ -25,26 +25,35 @@
       }
     }
     & > .icon-list {
+      display: flex;
       width: 98px;
       height: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      & > .facebook {
-        width: 7.5px;
-        height: 14px;
-      }
-      & > .twitter {
-        width: 14px;
-        height: 11.37px;
-      }
-      & > .instagram {
-        width: 12.26px;
-        height: 12.26px;
-      }
-      & > .rss {
-        width: 12.25px;
-        height: 12.25px;
+
+      & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% / 4);
+        height: 100%;
+        &:hover svg path {
+          fill: $gray-nobel;
+        }
+        & > .facebook {
+          width: 7.5px;
+          height: 14px;
+        }
+        & > .twitter {
+          width: 14px;
+          height: 11.37px;
+        }
+        & > .instagram {
+          width: 12.26px;
+          height: 12.26px;
+        }
+        & > .rss {
+          width: 12.25px;
+          height: 12.25px;
+        }
       }
     }
   }
