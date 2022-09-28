@@ -1,39 +1,37 @@
 @use "../../variables" as *;
 .organisms-about {
-  .about-body {
-    margin: 0 16px 100px 16px;
+  margin: 0 24px 100px 24px;
 
-    @media screen and (max-width: $breakpoint-lg) {
-      margin: 0 136px 40px 136px;
+  @media screen and (max-width: $breakpoint-lg) {
+    margin: 0 114px 40px 114px;
+  }
+
+  & > .about-imgbox {
+    display: flex;
+    flex-direction: row;
+
+    & > img {
+      width: calc(100% / 4);
     }
 
-    & > .about-imgbox {
-      display: flex;
-      flex-direction: row;
+    @media screen and(max-width:$breakpoint-lg) {
+      flex-wrap: wrap;
 
       & > img {
-        width: calc(100% / 4);
-      }
-
-      @media screen and(max-width:$breakpoint-lg) {
-        flex-wrap: wrap;
-
-        & > img {
-          width: calc(100% / 2);
-        }
+        width: calc(100% / 2);
       }
     }
+  }
 
-    & > .molecules-message {
-      background-color: $white_smoke;
+  & > .molecules-message {
+    background-color: $white_smoke;
 
-      & > .title {
-        color: $orange_bistre;
-      }
+    & > .title {
+      color: $orange_bistre;
+    }
 
-      & > .explain {
-        color: $black;
-      }
+    & > .explain {
+      color: $black;
     }
   }
 }

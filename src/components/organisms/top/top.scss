@@ -1,6 +1,10 @@
 @use "../../variables" as *;
 
 .organisms-top {
+  margin-bottom: 100px;
+  @media screen and (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
   & > .top-imgbox {
     height: 100%;
     position: relative;
