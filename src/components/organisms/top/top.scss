@@ -10,13 +10,10 @@
     position: relative;
     overflow: hidden;
 
-    @media screen and(max-width:$breakpoint-md) {
-      height: 360px;
-    }
-
     & > .top-img {
       width: max(100%, 480px);
       height: 100vh;
+      object-fit: cover;
     }
 
     & > h1 {
