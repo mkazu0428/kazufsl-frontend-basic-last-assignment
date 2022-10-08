@@ -6,8 +6,10 @@
   /*Molecules/Newsにmargin-bottom35pxが設定されているので
   見た目的には上下に余白が５０pxで統一*/
   background-color: $white-smoke;
+  margin-bottom: 100px;
 
   @media screen and(max-width:$breakpoint-lg) {
     padding-bottom: 50px;
+    margin-bottom: 40px;
   }
 }

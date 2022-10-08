@@ -1,18 +1,19 @@
 @use "../../variables" as *;
 
 .organisms-top {
+  margin-bottom: 100px;
+  @media screen and (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
   & > .top-imgbox {
     height: 100%;
     position: relative;
     overflow: hidden;
 
-    @media screen and(max-width:$breakpoint-md) {
-      height: 360px;
-    }
-
     & > .top-img {
       width: max(100%, 480px);
-      height: auto;
+      height: 100vh;
+      object-fit: cover;
     }
 
     & > h1 {
